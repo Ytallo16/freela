@@ -8,15 +8,12 @@ export type Patient = {
   horaAdmissao: string;
   sexo: 'M' | 'F' | 'O';
   idade: number;
-  peso: string;
-  altura: string;
-  imc: string;
   tipoNaturalidade: 'brasileiro' | 'estrangeiro';
   naturalidade?: string;
   paisOrigem?: string;
   estadoCivil: 'solteiro' | 'casado' | 'divorciado' | 'viuvo' | 'outros';
   escolaridadeProfissao: string;
-  foto?: string;
+  prontuario: string;
 };
 
 export const mockPatients: Patient[] = [
@@ -30,13 +27,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '09:30',
     sexo: 'F',
     idade: 38,
-    peso: '65.5',
-    altura: '168',
-    imc: '23.2',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'São Paulo/SP',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Arquiteta'
+    escolaridadeProfissao: 'Ensino Superior / Arquiteta',
+    prontuario: "123456"
   },
   {
     id: '2',
@@ -48,13 +43,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '14:15',
     sexo: 'M',
     idade: 45,
-    peso: '82.3',
-    altura: '178',
-    imc: '26.0',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Belo Horizonte/MG',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Engenheiro Civil'
+    escolaridadeProfissao: 'Ensino Superior / Engenheiro Civil',
+    prontuario: '2'
   },
   {
     id: '3',
@@ -66,13 +59,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '10:00',
     sexo: 'F',
     idade: 31,
-    peso: '58.7',
-    altura: '162',
-    imc: '22.4',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Rio de Janeiro/RJ',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Pós-graduação / Psicóloga'
+    escolaridadeProfissao: 'Pós-graduação / Psicóloga',
+    prontuario: '3'
   },
   {
     id: '4',
@@ -84,13 +75,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '16:45',
     sexo: 'M',
     idade: 58,
-    peso: '90.1',
-    altura: '175',
-    imc: '29.4',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Salvador/BA',
     estadoCivil: 'divorciado',
-    escolaridadeProfissao: 'Ensino Superior / Advogado'
+    escolaridadeProfissao: 'Ensino Superior / Advogado',
+    prontuario: '4'
   },
   {
     id: '5',
@@ -102,13 +91,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '08:30',
     sexo: 'F',
     idade: 43,
-    peso: '72.8',
-    altura: '165',
-    imc: '26.7',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Fortaleza/CE',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Professora'
+    escolaridadeProfissao: 'Ensino Superior / Professora',
+    prontuario: '5'
   },
   {
     id: '6',
@@ -120,13 +107,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '11:20',
     sexo: 'M',
     idade: 33,
-    peso: '75.0',
-    altura: '180',
-    imc: '23.1',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Recife/PE',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior / Analista de Sistemas'
+    escolaridadeProfissao: 'Ensino Superior / Analista de Sistemas',
+    prontuario: '6'
   },
   {
     id: '7',
@@ -138,13 +123,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '15:10',
     sexo: 'F',
     idade: 50,
-    peso: '63.2',
-    altura: '160',
-    imc: '24.7',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Porto Alegre/RS',
     estadoCivil: 'viuvo',
-    escolaridadeProfissao: 'Ensino Médio / Técnica em Enfermagem'
+    escolaridadeProfissao: 'Ensino Médio / Técnica em Enfermagem',
+    prontuario: '7'
   },
   {
     id: '8',
@@ -156,13 +139,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '09:45',
     sexo: 'M',
     idade: 35,
-    peso: '78.5',
-    altura: '182',
-    imc: '23.7',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Curitiba/PR',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Contador'
+    escolaridadeProfissao: 'Ensino Superior / Contador',
+    prontuario: '8'
   },
   {
     id: '9',
@@ -174,13 +155,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '13:30',
     sexo: 'F',
     idade: 28,
-    peso: '55.3',
-    altura: '158',
-    imc: '22.1',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Brasília/DF',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Pós-graduação / Nutricionista'
+    escolaridadeProfissao: 'Pós-graduação / Nutricionista',
+    prontuario: '9'
   },
   {
     id: '10',
@@ -192,13 +171,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '10:50',
     sexo: 'M',
     idade: 53,
-    peso: '85.0',
-    altura: '179',
-    imc: '26.5',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Manaus/AM',
     estadoCivil: 'divorciado',
-    escolaridadeProfissao: 'Ensino Superior / Empresário'
+    escolaridadeProfissao: 'Ensino Superior / Empresário',
+    prontuario: '10'
   },
   {
     id: '11',
@@ -210,13 +187,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '14:00',
     sexo: 'F',
     idade: 40,
-    peso: '67.1',
-    altura: '170',
-    imc: '23.2',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Goiânia/GO',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Farmacêutica'
+    escolaridadeProfissao: 'Ensino Superior / Farmacêutica',
+    prontuario: '11'
   },
   {
     id: '12',
@@ -228,13 +203,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '11:15',
     sexo: 'M',
     idade: 25,
-    peso: '70.3',
-    altura: '175',
-    imc: '23.0',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Florianópolis/SC',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior Incompleto / Estudante'
+    escolaridadeProfissao: 'Ensino Superior Incompleto / Estudante',
+    prontuario: '12'
   },
   {
     id: '13',
@@ -246,13 +219,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '16:20',
     sexo: 'F',
     idade: 47,
-    peso: '61.8',
-    altura: '163',
-    imc: '23.3',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Belém/PA',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Jornalista'
+    escolaridadeProfissao: 'Ensino Superior / Jornalista',
+    prontuario: '13'
   },
   {
     id: '14',
@@ -264,13 +235,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '09:10',
     sexo: 'M',
     idade: 55,
-    peso: '88.4',
-    altura: '177',
-    imc: '28.2',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Natal/RN',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Médico'
+    escolaridadeProfissao: 'Ensino Superior / Médico',
+    prontuario: '14'
   },
   {
     id: '15',
@@ -282,13 +251,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '13:45',
     sexo: 'F',
     idade: 30,
-    peso: '59.0',
-    altura: '168',
-    imc: '20.9',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'João Pessoa/PB',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Pós-graduação / Fisioterapeuta'
+    escolaridadeProfissao: 'Pós-graduação / Fisioterapeuta',
+    prontuario: '15'
   },
   {
     id: '16',
@@ -300,13 +267,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '10:30',
     sexo: 'M',
     idade: 43,
-    peso: '79.7',
-    altura: '183',
-    imc: '23.8',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Vitória/ES',
     estadoCivil: 'divorciado',
-    escolaridadeProfissao: 'Ensino Superior / Economista'
+    escolaridadeProfissao: 'Ensino Superior / Economista',
+    prontuario: '16'
   },
   {
     id: '17',
@@ -318,13 +283,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '15:50',
     sexo: 'F',
     idade: 23,
-    peso: '54.1',
-    altura: '160',
-    imc: '21.1',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Maceió/AL',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior Incompleto / Estudante'
+    escolaridadeProfissao: 'Ensino Superior Incompleto / Estudante',
+    prontuario: '17'
   },
   {
     id: '18',
@@ -336,13 +299,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '11:40',
     sexo: 'M',
     idade: 48,
-    peso: '83.5',
-    altura: '176',
-    imc: '27.0',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Teresina/PI',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Engenheiro Agrônomo'
+    escolaridadeProfissao: 'Ensino Superior / Engenheiro Agrônomo',
+    prontuario: '18'
   },
   {
     id: '19',
@@ -354,13 +315,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '08:55',
     sexo: 'F',
     idade: 34,
-    peso: '62.4',
-    altura: '165',
-    imc: '22.9',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'São Luís/MA',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Bióloga'
+    escolaridadeProfissao: 'Ensino Superior / Bióloga',
+    prontuario: '19'
   },
   {
     id: '20',
@@ -372,13 +331,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '14:25',
     sexo: 'F',
     idade: 41,
-    peso: '66.9',
-    altura: '169',
-    imc: '23.4',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Aracaju/SE',
     estadoCivil: 'divorciado',
-    escolaridadeProfissao: 'Pós-graduação / Dentista'
+    escolaridadeProfissao: 'Pós-graduação / Dentista',
+    prontuario: '20'
   },
   {
     id: '21',
@@ -390,13 +347,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '13:15',
     sexo: 'M',
     idade: 51,
-    peso: '84.2',
-    altura: '178',
-    imc: '26.6',
     tipoNaturalidade: 'estrangeiro',
     paisOrigem: 'Portugal',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Professor Universitário'
+    escolaridadeProfissao: 'Ensino Superior / Professor Universitário',
+    prontuario: '21'
   },
   {
     id: '22',
@@ -408,13 +363,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '10:40',
     sexo: 'F',
     idade: 27,
-    peso: '57.8',
-    altura: '161',
-    imc: '22.3',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Campo Grande/MS',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior / Publicitária'
+    escolaridadeProfissao: 'Ensino Superior / Publicitária',
+    prontuario: '22'
   },
   {
     id: '23',
@@ -426,13 +379,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '16:00',
     sexo: 'M',
     idade: 36,
-    peso: '76.3',
-    altura: '181',
-    imc: '23.3',
     tipoNaturalidade: 'estrangeiro',
     paisOrigem: 'Argentina',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Administrador'
+    escolaridadeProfissao: 'Ensino Superior / Administrador',
+    prontuario: '23'
   },
   {
     id: '24',
@@ -444,13 +395,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '09:20',
     sexo: 'F',
     idade: 44,
-    peso: '68.7',
-    altura: '172',
-    imc: '23.2',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Cuiabá/MT',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Veterinária'
+    escolaridadeProfissao: 'Ensino Superior / Veterinária',
+    prontuario: '24'
   },
   {
     id: '25',
@@ -462,13 +411,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '11:05',
     sexo: 'M',
     idade: 60,
-    peso: '92.5',
-    altura: '174',
-    imc: '30.5',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Palmas/TO',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Ensino Superior / Aposentado (ex-Professor)'
+    escolaridadeProfissao: 'Ensino Superior / Aposentado (ex-Professor)',
+    prontuario: '25'
   },
   {
     id: '26',
@@ -480,13 +427,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '13:50',
     sexo: 'F',
     idade: 33,
-    peso: '60.1',
-    altura: '164',
-    imc: '22.3',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Macapá/AP',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Pós-graduação / Psicóloga'
+    escolaridadeProfissao: 'Pós-graduação / Psicóloga',
+    prontuario: '26'
   },
   {
     id: '27',
@@ -498,13 +443,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '15:30',
     sexo: 'M',
     idade: 39,
-    peso: '77.8',
-    altura: '179',
-    imc: '24.3',
     tipoNaturalidade: 'estrangeiro',
     paisOrigem: 'Estados Unidos',
     estadoCivil: 'casado',
-    escolaridadeProfissao: 'Pós-graduação / Engenheiro de Software'
+    escolaridadeProfissao: 'Pós-graduação / Engenheiro de Software',
+    prontuario: '27'
   },
   {
     id: '28',
@@ -516,13 +459,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '09:00',
     sexo: 'F',
     idade: 29,
-    peso: '56.2',
-    altura: '166',
-    imc: '20.4',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Boa Vista/RR',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior / Arquiteta'
+    escolaridadeProfissao: 'Ensino Superior / Arquiteta',
+    prontuario: '28'
   },
   {
     id: '29',
@@ -534,13 +475,11 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '14:40',
     sexo: 'M',
     idade: 54,
-    peso: '86.9',
-    altura: '182',
-    imc: '26.2',
     tipoNaturalidade: 'brasileiro',
     naturalidade: 'Porto Velho/RO',
     estadoCivil: 'viuvo',
-    escolaridadeProfissao: 'Ensino Superior / Advogado'
+    escolaridadeProfissao: 'Ensino Superior / Advogado',
+    prontuario: '29'
   },
   {
     id: '30',
@@ -552,12 +491,10 @@ export const mockPatients: Patient[] = [
     horaAdmissao: '11:30',
     sexo: 'F',
     idade: 26,
-    peso: '53.5',
-    altura: '159',
-    imc: '21.2',
     tipoNaturalidade: 'estrangeiro',
     paisOrigem: 'França',
     estadoCivil: 'solteiro',
-    escolaridadeProfissao: 'Ensino Superior / Designer'
+    escolaridadeProfissao: 'Ensino Superior / Designer',
+    prontuario: '30'
   }
 ];
